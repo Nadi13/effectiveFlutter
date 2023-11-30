@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fall_2023_project/appBar.dart';
 
+
 class Profile extends StatelessWidget {
   const Profile({super.key});
 
@@ -14,7 +15,10 @@ class Profile extends StatelessWidget {
             const appBar()
           ];
         },
-        body: Container()
+        body: TabBarView(
+      children: [Container(color: Colors.blue),
+      Container(color: Colors.red)],
+    ),
       ),
     ),
   );

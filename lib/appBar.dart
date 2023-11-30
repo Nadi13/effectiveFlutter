@@ -1,35 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+
 
 class appBar extends StatelessWidget {
   const appBar({super.key});
 
   @override
   Widget build(BuildContext context){
+    var  myTabs = ["Профиль", "Настройки"];
     return SliverOverlapAbsorber(
       handle: NestedScrollView.sliverOverlapAbsorberHandleFor(context),
       sliver: SliverAppBar(
-        systemOverlayStyle: const SystemUiOverlayStyle(
-          statusBarColor: Colors.transparent,
-          statusBarIconBrightness: Brightness.dark, 
-          statusBarBrightness: Brightness.light, 
-        ),
         snap: false,
         pinned: true,
         floating: false,
         flexibleSpace:  FlexibleSpaceBar(
           centerTitle: true,
-          titlePadding: const EdgeInsets.only(bottom: 14),
+          titlePadding: const EdgeInsets.only(bottom: 62),
           title: const Text('Екатерина',
             style: TextStyle(fontSize: 16,
               color: Colors.black
             )
           ),
-          background: DecoratedBox(
-            decoration: const BoxDecoration(
-              color: Colors.white,
-            ),
-            child: Padding(
+          background: Padding(
               padding:  const EdgeInsets.only(top: 58),
               child: Align(
                 alignment: Alignment.topCenter,
@@ -41,11 +33,10 @@ class appBar extends StatelessWidget {
                 )
               )
             ),
-          ),
           collapseMode: CollapseMode.pin,
         ),
-        expandedHeight: 222,
-        backgroundColor: Colors.green[50],
+        expandedHeight: 250,
+        backgroundColor: Colors.white,
         leading: IconButton(
           icon: Image.asset('assets/cross.png'),
           tooltip: 'Cross',
@@ -58,6 +49,9 @@ class appBar extends StatelessWidget {
             onPressed: () {},
             ),
           ],
+          bottom: TabBar(
+            tabs: myTabs.map((String name) => Tab(text: name)).toList(),
+          ),
       )
     );
   }
