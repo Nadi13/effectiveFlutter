@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fall_2023_project/appBar.dart';
+import 'package:fall_2023_project/profileContent.dart';
 
 
 class Profile extends StatelessWidget {
@@ -12,12 +13,14 @@ class Profile extends StatelessWidget {
       body: NestedScrollView(
         headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled){
           return <Widget>[
-            const appBar()
+            const MyAppBar()
           ];
         },
         body: TabBarView(
-      children: [Container(color: Colors.blue),
-      Container(color: Colors.red)],
+      children: [
+      const ProfileContent(),
+      Container(color: Colors.red)
+      ],
     ),
       ),
     ),

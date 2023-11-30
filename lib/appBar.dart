@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:fall_2023_project/myTools/strings.dart';
 
 
-class appBar extends StatelessWidget {
-  const appBar({super.key});
+class MyAppBar extends StatelessWidget {
+  const MyAppBar({super.key});
 
   @override
   Widget build(BuildContext context){
-    var  myTabs = ["Профиль", "Настройки"];
+    var  myTabs = [Strings.profile, Strings.settings];
     return SliverOverlapAbsorber(
       handle: NestedScrollView.sliverOverlapAbsorberHandleFor(context),
       sliver: SliverAppBar(
@@ -16,7 +17,7 @@ class appBar extends StatelessWidget {
         flexibleSpace:  FlexibleSpaceBar(
           centerTitle: true,
           titlePadding: const EdgeInsets.only(bottom: 62),
-          title: const Text('Екатерина',
+          title: const Text(Strings.userName,
             style: TextStyle(fontSize: 16,
               color: Colors.black
             )
@@ -39,13 +40,11 @@ class appBar extends StatelessWidget {
         backgroundColor: Colors.white,
         leading: IconButton(
           icon: Image.asset('assets/cross.png'),
-          tooltip: 'Cross',
           onPressed: () {},
         ),
         actions: <Widget>[
           IconButton(
             icon: Image.asset('assets/arrow_right_square.png'),
-            tooltip: 'Arrow_right_square',
             onPressed: () {},
             ),
           ],
