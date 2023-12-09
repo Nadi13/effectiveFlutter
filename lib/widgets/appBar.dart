@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fall_2023_project/myTools/strings.dart';
+import 'package:fall_2023_project/myTools/colors.dart';
 
 
 class MyAppBar extends StatelessWidget {
@@ -37,7 +38,7 @@ class MyAppBar extends StatelessWidget {
           collapseMode: CollapseMode.pin,
         ),
         expandedHeight: 250,
-        backgroundColor: Colors.white,
+        backgroundColor: MyColors.primary,
         leading: IconButton(
           icon: Image.asset('assets/cross.png'),
           onPressed: () {},
@@ -51,7 +52,7 @@ class MyAppBar extends StatelessWidget {
           bottom: TabBar(
             tabs: myTabs.map((String name) => Tab(text: name)).toList(),
           ),
-      )
+      ),
     );
   }
 }

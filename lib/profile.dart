@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fall_2023_project/appBar.dart';
-import 'package:fall_2023_project/profileContent.dart';
+import 'package:fall_2023_project/widgets/appBar.dart';
+import 'package:fall_2023_project/widgets/profileContent.dart';
+import 'package:fall_2023_project/myTools/colors.dart';
 
 
 class Profile extends StatelessWidget {
@@ -17,11 +18,11 @@ class Profile extends StatelessWidget {
           ];
         },
         body: TabBarView(
-      children: [
-      const ProfileContent(),
-      Container(color: Colors.red)
-      ],
-    ),
+          children: [
+            const ProfileContent(),
+            Container(color: MyColors.primary)
+          ],
+        ),
       ),
     ),
   );
