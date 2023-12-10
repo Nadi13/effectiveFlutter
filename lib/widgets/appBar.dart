@@ -24,17 +24,17 @@ class MyAppBar extends StatelessWidget {
             )
           ),
           background: Padding(
-              padding:  const EdgeInsets.only(top:58),
-              child: Align(
-                alignment: Alignment.topCenter,
-                child: SizedBox(
-                  child: Image.asset('assets/user.png',
-                    width:110,
-                    height:110,
-                  )
+            padding:  const EdgeInsets.only(top:58),
+            child: Align(
+              alignment: Alignment.topCenter,
+              child: SizedBox(
+                child: Image.asset('assets/user.png',
+                width:110,
+                height:110,
                 )
               )
-            ),
+            )
+          ),
           collapseMode: CollapseMode.pin,
         ),
         expandedHeight: 250,
@@ -47,11 +47,11 @@ class MyAppBar extends StatelessWidget {
           IconButton(
             icon: Image.asset('assets/arrow_right_square.png'),
             onPressed: () {},
-            ),
-          ],
-          bottom: TabBar(
-            tabs: myTabs.map((String name) => Tab(text: name)).toList(),
           ),
+        ],
+        bottom: TabBar(
+          tabs: myTabs.map((String name) => Tab(text: name)).toList(),
+        ),
       ),
     );
   }

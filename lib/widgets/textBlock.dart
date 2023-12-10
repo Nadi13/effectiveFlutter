@@ -11,26 +11,26 @@ class TextBlock extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal:16),
       child:Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          header,
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.w700,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            header,
+            style: const TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.w700,
+            )
+          ),
+          const SizedBox(height: 8),
+          Text(
+            text!,
+            style: TextStyle(
+              color: MyColors.textSecondary,
+              fontSize: 14,
+              fontWeight: FontWeight.w500,
+            )
           )
-        ),
-        SizedBox(height: 8),
-        Text(
-          text!,
-          style: TextStyle(
-            color: MyColors.textSecondary,
-            fontSize: 14,
-            fontWeight: FontWeight.w500,
-          )
-        )
-      ]
-    ),
+        ]
+      ),
     );
   }
 }
