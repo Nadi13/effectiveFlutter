@@ -23,7 +23,7 @@ class Cards extends StatelessWidget {
                 child:  Card(
                   surfaceTintColor: Colors.white,
                   elevation: 10,
-                  shadowColor: Colors.black.withOpacity(0.2),
+                  shadowColor: Colors.black.withOpacity(0.4),
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,

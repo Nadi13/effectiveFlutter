@@ -24,7 +24,7 @@ class MyAppBar extends StatelessWidget {
             )
           ),
           background: Padding(
-              padding:  const EdgeInsets.only(top: 58),
+              padding:  const EdgeInsets.only(top:58),
               child: Align(
                 alignment: Alignment.topCenter,
                 child: SizedBox(

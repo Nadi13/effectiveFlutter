@@ -15,7 +15,7 @@ abstract class Strings {
   static const String transfersAndPayment = "На платежи и переводы";
   static const String transfers = "Переводы без комиссии";
   static const String balance = "Показать остаток в этом месяце";
-  static const String information = "Информация о тарифах и лимитах";
+  static const String information = "Информация о тарифах \nи лимитах";
   static const String interests = "Интересы";
   static const String stories = "Мы подбираем истории и предложения по темам, которые вам нравятся";
   static const String food = "Еда";
