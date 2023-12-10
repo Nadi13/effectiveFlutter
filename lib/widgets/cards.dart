@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fall_2023_project/Ui/cardsUi.dart';
+import 'package:fall_2023_project/myTools/colors.dart';
+import 'package:fall_2023_project/myTools/fontsTheme.dart';
 
 
 class Cards extends StatelessWidget {
@@ -20,9 +22,9 @@ class Cards extends StatelessWidget {
             return SizedBox(
               width: 216,
               child:  Card(
-                surfaceTintColor: Colors.white,
+                surfaceTintColor: MyColors.primary,
                 elevation: 10,
-                shadowColor: Colors.black.withOpacity(0.4),
+                shadowColor: MyColors.boxShadowColor,
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -38,7 +40,9 @@ class Cards extends StatelessWidget {
                               height: 36
                             ),
                             const SizedBox(width:12),
-                            Text(cards[index].title)
+                            Text(cards[index].title,
+                                style: sfProTextTheme.bodyMedium
+                            )
                           ],
                         )
                       )
@@ -54,18 +58,12 @@ class Cards extends StatelessWidget {
                           Text(
                             cards[index].subtitle,
                             softWrap: false, 
-                            style: const TextStyle(fontSize: 14, 
-                              letterSpacing: -0.41
-                            ),
+                            style:  sfProTextTheme.labelMedium
                           ),
                           const SizedBox(height:2),
                           Text(
                             cards[index].cost,
-                            style: const TextStyle(
-                              color: Colors.black,
-                              fontSize: 14,
-                              letterSpacing: -0.41
-                            )
+                            style: sfProTextTheme.labelSmall
                           )
                         ],
                       )

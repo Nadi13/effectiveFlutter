@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fall_2023_project/myTools/colors.dart';
+import 'package:fall_2023_project/myTools/fontsTheme.dart';
 
 class TextBlock extends StatelessWidget {
   final String header;
@@ -15,19 +15,12 @@ class TextBlock extends StatelessWidget {
         children: [
           Text(
             header,
-            style: const TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.w700,
-            )
+            style: sfProTextTheme.titleLarge,
           ),
           const SizedBox(height: 8),
           Text(
             text!,
-            style: TextStyle(
-              color: MyColors.textSecondary,
-              fontSize: 14,
-              fontWeight: FontWeight.w500,
-            )
+            style: sfProTextTheme.labelLarge,
           )
         ]
       ),

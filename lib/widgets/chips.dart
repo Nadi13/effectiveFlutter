@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fall_2023_project/myTools/colors.dart';
+import 'package:fall_2023_project/myTools/fontsTheme.dart';
 
 class SelectableChips extends StatefulWidget {
   final List<String> items;
@@ -28,11 +30,14 @@ class _SelectableChipsState extends State<SelectableChips> {
         children: List<Widget>.generate(widget.items.length, (index) {
           return ChoiceChip(
             shape: const StadiumBorder(),
-            label: Text(widget.items[index]),
+            label: Text(
+              widget.items[index], 
+              style: sfProTextTheme.labelMedium
+            ),
             selected: isSelected[index],
-            selectedColor: Colors.green,
-            backgroundColor: Color.fromRGBO(0, 0, 0, 0.08),
-            checkmarkColor: Colors.black,
+            selectedColor: MyColors.chips,
+            backgroundColor: MyColors.backgroundChips,
+            checkmarkColor: MyColors.secondary,
             onSelected: (bool selected) {
               setState(() {
                 isSelected[index] = selected;

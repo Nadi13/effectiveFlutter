@@ -14,13 +14,13 @@ class ProfileContent extends StatelessWidget {
   Widget build(BuildContext context){
     List<CardsUi> cards = [
       CardsUi(
-        image: 'assets/cber.png',
+        image: 'assets/image/cber.png',
         title: Strings.sber,
         subtitle: Strings.payment,
         cost: Strings.pay
       ),
       CardsUi(
-        image: 'assets/percent_fill.png',
+        image: 'assets/image/percent_fill.png',
         title: Strings.translations,
         subtitle: Strings.autoRenewal,
         cost: Strings.pay
@@ -29,17 +29,17 @@ class ProfileContent extends StatelessWidget {
 
     List<TransactionsUi> transactions = [
       TransactionsUi(
-        image: 'assets/speedometer.png',
+        image: 'assets/image/speedometer.png',
         title: Strings.limit,
         subtitle: Strings.transfersAndPayment,
       ),
       TransactionsUi(
-        image: 'assets/percent.png',
+        image: 'assets/image/percent.png',
         title: Strings.transfers,
         subtitle: Strings.balance,
       ),
       TransactionsUi(
-        image: 'assets/forward_back.png',
+        image: 'assets/image/forward_back.png',
         title: Strings.information,
         subtitle: null,
       )
@@ -77,10 +77,7 @@ class ProfileContent extends StatelessWidget {
                   ),
                 ),
                 SliverToBoxAdapter(
-                  child: Padding(
-                    padding: const EdgeInsets.only(top:0),
-                    child: TransactionBlock(transactions:transactions),
-                  )
+                  child: TransactionBlock(transactions:transactions),
                 ),
                 SliverToBoxAdapter(
                   child: Padding(

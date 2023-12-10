@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:fall_2023_project/myTools/colors.dart';
+import 'package:fall_2023_project/myTools/fontsTheme.dart';
 
 final themeData = ThemeData(
+  textTheme: sfProTextTheme,
+  appBarTheme: const AppBarTheme(
+     backgroundColor: MyColors.primary,
+  ),
   tabBarTheme: const TabBarTheme(
     indicatorColor: Colors.green,
     labelColor: Colors.black,
