@@ -21,7 +21,8 @@ class Cards extends StatelessWidget {
           itemBuilder: (context, index) {
             return SizedBox(
               width: 216,
-              child:  Card(
+              height:150,
+              child: Card(
                 surfaceTintColor: MyColors.primary,
                 elevation: 10,
                 shadowColor: MyColors.boxShadowColor,

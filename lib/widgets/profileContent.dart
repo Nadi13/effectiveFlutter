@@ -53,9 +53,9 @@ class ProfileContent extends StatelessWidget {
                  Strings.care, 
                  Strings.science];
 
-    return  Scaffold( 
-      body: Padding(
-        padding: const EdgeInsets.only(top: 16, bottom: 20),
+    return  SafeArea( 
+      child: Padding(
+        padding: const EdgeInsets.only(bottom: 20),
         child: Builder( 
           builder: (BuildContext context) {
             return CustomScrollView(
@@ -70,9 +70,9 @@ class ProfileContent extends StatelessWidget {
                     child: Cards(cards:cards)
                   )
                 ),
-                SliverToBoxAdapter(
+               SliverToBoxAdapter(
                   child: Padding(
-                    padding:  EdgeInsets.only(top:32),
+                    padding: EdgeInsets.only(top:38),
                     child: TextBlock(header: Strings.tariffs, text: Strings.transactions),
                   ),
                 ),
@@ -81,7 +81,7 @@ class ProfileContent extends StatelessWidget {
                 ),
                 SliverToBoxAdapter(
                   child: Padding(
-                    padding:  EdgeInsets.only(top:40),
+                    padding:  EdgeInsets.only(top:30),
                     child: TextBlock(header: Strings.interests, text: Strings.stories),
                   ),
                 ),
