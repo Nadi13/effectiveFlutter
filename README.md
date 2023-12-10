@@ -17,6 +17,6 @@ samples, guidance on mobile development, and a full API reference.
 
 ![Alt text](screens/screen1.jpg)
 
-![Alt text](Screens/screen2.jpg)
+![Alt text](screens/screen2.jpg)
 
-![Alt text](Screens/screen3.jpg)
+![Alt text](screens/screen3.jpg)
